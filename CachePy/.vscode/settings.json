@@ -1,9 +1,11 @@
 {
     "python.testing.pytestArgs": [
-        ""
+        "LinkSrc"
     ],
     "python.testing.unittestEnabled": false,
     "python.testing.nosetestsEnabled": false,
     "python.testing.pytestEnabled": true,
-    "python.pythonPath": "/users/sdbrady9/.cache/bin/python3.9"
+    "python.pythonPath": "/users/sdbrady9/.cache/bin/python3.9",
+    "cwd":"${workspaceFolder}/LinkSrc"
+
 }
