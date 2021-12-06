@@ -8,9 +8,9 @@ def main(argv):
    objFile = ''
 
    try:
-      opts, args = getopt.getopt(argv,"c:o:l:",["c=","object=","percLoss"])
+      opts, args = getopt.getopt(argv,"hc:o:l:",["c=","object=","percLoss"])
    except getopt.GetoptError:
-      print('a')
+      
       print('mainFile.py -c <1/0> -o <objectFile> -l <percentageLoss>')
       sys.exit(2)
    for opt, arg in opts:
@@ -27,7 +27,7 @@ def main(argv):
          percLoss = arg
 
 
-s
+
    print('Cache in use ', cacheUse)
    print('Object file is ', objFile)
    print('Percentage Loss is ', percLoss)
