@@ -2,6 +2,7 @@ import pytest
 import linkTput
 import adjustLink
 import subprocess
+import os 
 
 def test_buildLinkMap():
     m = linkTput.buildLinkMaps()
@@ -15,6 +16,33 @@ def test_adjustLink():
         assert loss == '0.01%'
     finally:
        adjustLink.delLinkAdj("eth0")
+
+
+def test_Activate_IperfServer():
+    assert os.path.exists("LinkSrc/IperfId.txt") == False #Make sure that this is the case, AKA no IperfServer is running 
+                                                            #DO NOT JUST DELETE THE FILE TO MAKE THIS PASS
+    try:
+        linkTput.activateIperfServer()
+        assert os.path.exists("LinkSrc/IperfId.txt") == True
+        pass
+    finally:
+        linkTput.deactiveIperServer()
+    pass
+
+
+def test_readingIperfStatus():
+    assert os.path.exists("LinkSrc/IperfId.txt") == False #Make sure that this is the case, AKA no IperfServer is running 
+                                                            #DO NOT JUST DELETE THE FILE TO MAKE THIS PASS
+
+    f = open('LinkSrc/IperfId.txt','w')
+    f.write('9769')
+    f.close()
+    try:
+        assert os.path.exists("LinkSrc/IperfId.txt") == True
+        assert linkTput.readIperfServerStatus() == 9769     
+    finally:
+        os.remove('LinkSrc/IperfId.txt')
+    
 
 
 
