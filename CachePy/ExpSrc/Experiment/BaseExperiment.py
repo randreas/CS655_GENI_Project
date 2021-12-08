@@ -56,7 +56,7 @@ def runExperiment(fetchOrder,rerunOrig,ExpName:str):
 
 if __name__ =="__main__":
 
-    Exps= [("1MB0.txt","1MB1.txt","1MB2.txt","1MB3.txt","1MB4.txt","1MB5.txt","1MB6.txt","1MB7.txt","1MB8.txt")]
+    Exps= [("1MB0.txt","1MB1.txt","1MB2.txt","1MB0.txt","1MB1.txt","1MB2.txt","1MB0.txt","1MB1.txt","1MB2.txt")]
     
     for i in range(len(Exps)):
         print("exp:",Exps[i])
