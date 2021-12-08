@@ -16,4 +16,3 @@ def timeTaken(command:Command):
     command.execute()
     return (time.time()- start_time)
 
-print(timeTaken(testCommand()))

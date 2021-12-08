@@ -32,8 +32,12 @@ if __name__ =="__main__":
         fileSize = os.stat(f).st_size #get index.html size in bytes
         tput_stats.add((fileSize*8)/latency) #add throughput sample in bits/second
     print("ORIGIN_SERVER")
-    print("Latency min/avg/max/std_dev: %s/%s/%s/%s"%(latency_stats.min,latency_stats.getMean(),latency_stats.max,latency_stats.std_dev))
-    print("Throughput min/avg/max/std_dev: %s/%s/%s/%s"%(tput_stats.min,tput_stats.getMean(),tput_stats.max,tput_stats.std_dev))
+    print("Stat,min,avg,max,std_dev")
+    print("Latency,%s,%s,%s,%s"%(latency_stats.min,latency_stats.getMean(),latency_stats.max,latency_stats.std_dev))
+    print("Throughput,%s,%s,%s,%s"%(tput_stats.min,tput_stats.getMean(),tput_stats.max,tput_stats.std_dev))
+    
+    latency_stats = SampleStatistics()
+    tput_stats = SampleStatistics()
     
     for f in fetchOrder:
         if os.path.exists(f): #wget download files so just make sure
