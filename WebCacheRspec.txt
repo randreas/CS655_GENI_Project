@@ -1,0 +1,156 @@
+<rspec xmlns="http://www.geni.net/resources/rspec/3" xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1" xmlns:tour="http://www.protogeni.net/resources/rspec/ext/apt-tour/1" xmlns:jacks="http://www.protogeni.net/resources/rspec/ext/jacks/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.geni.net/resources/rspec/3    http://www.geni.net/resources/rspec/3/request.xsd" type="request">
+  <node xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1" client_id="client" component_manager_id="urn:publicid:IDN+instageni.nysernet.org+authority+cm" component_id="urn:publicid:IDN+instageni.nysernet.org+node+pc3" sliver_id="urn:publicid:IDN+instageni.nysernet.org+sliver+61753" exclusive="false">
+    <icon xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" url="https://portal.geni.net/images/VM-noTxt-centered.svg"/>
+    <sliver_type name="default-vm"/>
+    <services>
+      <login authentication="ssh-keys" hostname="pc3.instageni.nysernet.org" port="26412" username="ra7296"/>
+      <login authentication="ssh-keys" hostname="pc3.instageni.nysernet.org" port="26412" username="zhangzs"/>
+      <login authentication="ssh-keys" hostname="pc3.instageni.nysernet.org" port="26412" username="matta"/>
+      <login authentication="ssh-keys" hostname="pc3.instageni.nysernet.org" port="26412" username="sdbrady9"/>
+      <login authentication="ssh-keys" hostname="pc3.instageni.nysernet.org" port="26412" username="pfcarp21"/>
+      <login authentication="ssh-keys" hostname="pc3.instageni.nysernet.org" port="26412" username="isolom"/>
+      <login authentication="ssh-keys" hostname="pc3.instageni.nysernet.org" port="26412" username="fahadf"/>
+      <emulab:console server="pc3.instageni.nysernet.org"/>
+      <emulab:imageable available="true"/>
+    </services>
+    <interface client_id="interface-2" component_id="urn:publicid:IDN+instageni.nysernet.org+interface+pc3:lo0" sliver_id="urn:publicid:IDN+instageni.nysernet.org+sliver+61758" mac_address="02cf3a1b697f">
+      <ip address="10.10.1.1" netmask="255.255.255.0" type="ipv4"/>
+    </interface>
+    <interface client_id="interface-5" component_id="urn:publicid:IDN+instageni.nysernet.org+interface+pc3:lo0" sliver_id="urn:publicid:IDN+instageni.nysernet.org+sliver+61762" mac_address="0297c4c5cf8d">
+      <ip address="10.10.2.2" netmask="255.255.255.0" type="ipv4"/>
+    </interface>
+    <interface client_id="interface-6" component_id="urn:publicid:IDN+instageni.nysernet.org+interface+pc3:lo0" sliver_id="urn:publicid:IDN+instageni.nysernet.org+sliver+61764" mac_address="020579bd981c">
+      <ip address="10.10.3.1" netmask="255.255.255.0" type="ipv4"/>
+    </interface>
+    <emulab:vnode name="pcvm3-6" hardware_type="pcvm" disk_image="emulab-ops/UBUNTU18-64-STD:0"/>
+    <host name="client.WebCache-Project.ch-geni-net.instageni.nysernet.org"/>
+  </node>
+  <node xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1" client_id="server" component_manager_id="urn:publicid:IDN+instageni.nysernet.org+authority+cm" component_id="urn:publicid:IDN+instageni.nysernet.org+node+pc3" sliver_id="urn:publicid:IDN+instageni.nysernet.org+sliver+61755" exclusive="false">
+    <icon xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" url="https://portal.geni.net/images/VM-noTxt-centered.svg"/>
+    <sliver_type name="default-vm"/>
+    <services>
+      <login authentication="ssh-keys" hostname="pc3.instageni.nysernet.org" port="26414" username="ra7296"/>
+      <login authentication="ssh-keys" hostname="pc3.instageni.nysernet.org" port="26414" username="zhangzs"/>
+      <login authentication="ssh-keys" hostname="pc3.instageni.nysernet.org" port="26414" username="matta"/>
+      <login authentication="ssh-keys" hostname="pc3.instageni.nysernet.org" port="26414" username="sdbrady9"/>
+      <login authentication="ssh-keys" hostname="pc3.instageni.nysernet.org" port="26414" username="pfcarp21"/>
+      <login authentication="ssh-keys" hostname="pc3.instageni.nysernet.org" port="26414" username="isolom"/>
+      <login authentication="ssh-keys" hostname="pc3.instageni.nysernet.org" port="26414" username="fahadf"/>
+      <emulab:console server="pc3.instageni.nysernet.org"/>
+      <emulab:imageable available="true"/>
+    </services>
+    <interface client_id="interface-9" component_id="urn:publicid:IDN+instageni.nysernet.org+interface+pc3:lo0" sliver_id="urn:publicid:IDN+instageni.nysernet.org+sliver+61768" mac_address="02aa616d68d5">
+      <ip address="10.10.4.2" netmask="255.255.255.0" type="ipv4"/>
+    </interface>
+    <emulab:vnode name="pcvm3-8" hardware_type="pcvm" disk_image="emulab-ops/UBUNTU18-64-STD:0"/>
+    <host name="server.WebCache-Project.ch-geni-net.instageni.nysernet.org"/>
+  </node>
+  <node xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1" client_id="cache1" component_manager_id="urn:publicid:IDN+instageni.nysernet.org+authority+cm" component_id="urn:publicid:IDN+instageni.nysernet.org+node+pc3" sliver_id="urn:publicid:IDN+instageni.nysernet.org+sliver+61751" exclusive="false">
+    <icon xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" url="https://portal.geni.net/images/VM-noTxt-centered.svg"/>
+    <sliver_type name="default-vm"/>
+    <services>
+      <login authentication="ssh-keys" hostname="pc3.instageni.nysernet.org" port="26410" username="ra7296"/>
+      <login authentication="ssh-keys" hostname="pc3.instageni.nysernet.org" port="26410" username="zhangzs"/>
+      <login authentication="ssh-keys" hostname="pc3.instageni.nysernet.org" port="26410" username="matta"/>
+      <login authentication="ssh-keys" hostname="pc3.instageni.nysernet.org" port="26410" username="sdbrady9"/>
+      <login authentication="ssh-keys" hostname="pc3.instageni.nysernet.org" port="26410" username="pfcarp21"/>
+      <login authentication="ssh-keys" hostname="pc3.instageni.nysernet.org" port="26410" username="isolom"/>
+      <login authentication="ssh-keys" hostname="pc3.instageni.nysernet.org" port="26410" username="fahadf"/>
+      <emulab:console server="pc3.instageni.nysernet.org"/>
+      <emulab:imageable available="true"/>
+    </services>
+    <interface client_id="interface-3" component_id="urn:publicid:IDN+instageni.nysernet.org+interface+pc3:lo0" sliver_id="urn:publicid:IDN+instageni.nysernet.org+sliver+61759" mac_address="0205091ced64">
+      <ip address="10.10.1.2" netmask="255.255.255.0" type="ipv4"/>
+    </interface>
+    <interface client_id="interface-10" component_id="urn:publicid:IDN+instageni.nysernet.org+interface+pc3:lo0" sliver_id="urn:publicid:IDN+instageni.nysernet.org+sliver+61770" mac_address="02ea8862f793">
+      <ip address="10.10.5.1" netmask="255.255.255.0" type="ipv4"/>
+    </interface>
+    <emulab:vnode name="pcvm3-4" hardware_type="pcvm" disk_image="emulab-ops/UBUNTU18-64-STD:0"/>
+    <host name="cache1.WebCache-Project.ch-geni-net.instageni.nysernet.org"/>
+  </node>
+  <node xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1" client_id="cache2" component_manager_id="urn:publicid:IDN+instageni.nysernet.org+authority+cm" component_id="urn:publicid:IDN+instageni.nysernet.org+node+pc3" sliver_id="urn:publicid:IDN+instageni.nysernet.org+sliver+61752" exclusive="false">
+    <icon xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" url="https://portal.geni.net/images/VM-noTxt-centered.svg"/>
+    <sliver_type name="default-vm"/>
+    <services>
+      <login authentication="ssh-keys" hostname="pc3.instageni.nysernet.org" port="26411" username="ra7296"/>
+      <login authentication="ssh-keys" hostname="pc3.instageni.nysernet.org" port="26411" username="zhangzs"/>
+      <login authentication="ssh-keys" hostname="pc3.instageni.nysernet.org" port="26411" username="matta"/>
+      <login authentication="ssh-keys" hostname="pc3.instageni.nysernet.org" port="26411" username="sdbrady9"/>
+      <login authentication="ssh-keys" hostname="pc3.instageni.nysernet.org" port="26411" username="pfcarp21"/>
+      <login authentication="ssh-keys" hostname="pc3.instageni.nysernet.org" port="26411" username="isolom"/>
+      <login authentication="ssh-keys" hostname="pc3.instageni.nysernet.org" port="26411" username="fahadf"/>
+      <emulab:console server="pc3.instageni.nysernet.org"/>
+      <emulab:imageable available="true"/>
+    </services>
+    <interface client_id="interface-4" component_id="urn:publicid:IDN+instageni.nysernet.org+interface+pc3:lo0" sliver_id="urn:publicid:IDN+instageni.nysernet.org+sliver+61761" mac_address="02556bcc247e">
+      <ip address="10.10.2.1" netmask="255.255.255.0" type="ipv4"/>
+    </interface>
+    <interface client_id="interface-12" component_id="urn:publicid:IDN+instageni.nysernet.org+interface+pc3:lo0" sliver_id="urn:publicid:IDN+instageni.nysernet.org+sliver+61773" mac_address="027e03e3e93a">
+      <ip address="10.10.6.1" netmask="255.255.255.0" type="ipv4"/>
+    </interface>
+    <emulab:vnode name="pcvm3-5" hardware_type="pcvm" disk_image="emulab-ops/UBUNTU18-64-STD:0"/>
+    <host name="cache2.WebCache-Project.ch-geni-net.instageni.nysernet.org"/>
+  </node>
+  <node xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1" client_id="router" component_manager_id="urn:publicid:IDN+instageni.nysernet.org+authority+cm" component_id="urn:publicid:IDN+instageni.nysernet.org+node+pc3" sliver_id="urn:publicid:IDN+instageni.nysernet.org+sliver+61754" exclusive="false">
+    <icon xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" url="https://portal.geni.net/images/VM-noTxt-centered.svg"/>
+    <sliver_type name="default-vm"/>
+    <services>
+      <login authentication="ssh-keys" hostname="pc3.instageni.nysernet.org" port="26413" username="ra7296"/>
+      <login authentication="ssh-keys" hostname="pc3.instageni.nysernet.org" port="26413" username="zhangzs"/>
+      <login authentication="ssh-keys" hostname="pc3.instageni.nysernet.org" port="26413" username="matta"/>
+      <login authentication="ssh-keys" hostname="pc3.instageni.nysernet.org" port="26413" username="sdbrady9"/>
+      <login authentication="ssh-keys" hostname="pc3.instageni.nysernet.org" port="26413" username="pfcarp21"/>
+      <login authentication="ssh-keys" hostname="pc3.instageni.nysernet.org" port="26413" username="isolom"/>
+      <login authentication="ssh-keys" hostname="pc3.instageni.nysernet.org" port="26413" username="fahadf"/>
+      <emulab:console server="pc3.instageni.nysernet.org"/>
+      <emulab:imageable available="true"/>
+    </services>
+    <interface client_id="interface-7" component_id="urn:publicid:IDN+instageni.nysernet.org+interface+pc3:lo0" sliver_id="urn:publicid:IDN+instageni.nysernet.org+sliver+61765" mac_address="02d3bd33b839">
+      <ip address="10.10.3.2" netmask="255.255.255.0" type="ipv4"/>
+    </interface>
+    <interface client_id="interface-8" component_id="urn:publicid:IDN+instageni.nysernet.org+interface+pc3:lo0" sliver_id="urn:publicid:IDN+instageni.nysernet.org+sliver+61767" mac_address="02b27f087785">
+      <ip address="10.10.4.1" netmask="255.255.255.0" type="ipv4"/>
+    </interface>
+    <interface client_id="interface-11" component_id="urn:publicid:IDN+instageni.nysernet.org+interface+pc3:lo0" sliver_id="urn:publicid:IDN+instageni.nysernet.org+sliver+61771" mac_address="02d77ff69057">
+      <ip address="10.10.5.2" netmask="255.255.255.0" type="ipv4"/>
+    </interface>
+    <interface client_id="interface-13" component_id="urn:publicid:IDN+instageni.nysernet.org+interface+pc3:lo0" sliver_id="urn:publicid:IDN+instageni.nysernet.org+sliver+61774" mac_address="02f90e26c9f6">
+      <ip address="10.10.6.2" netmask="255.255.255.0" type="ipv4"/>
+    </interface>
+    <emulab:vnode name="pcvm3-7" hardware_type="pcvm" disk_image="emulab-ops/UBUNTU18-64-STD:0"/>
+    <host name="router.WebCache-Project.ch-geni-net.instageni.nysernet.org"/>
+  </node>
+  <link client_id="link-1" sliver_id="urn:publicid:IDN+instageni.nysernet.org+sliver+61757">
+    <interface_ref client_id="interface-2" component_id="urn:publicid:IDN+instageni.nysernet.org+interface+pc3:lo0" sliver_id="urn:publicid:IDN+instageni.nysernet.org+sliver+61758"/>
+    <interface_ref client_id="interface-3" component_id="urn:publicid:IDN+instageni.nysernet.org+interface+pc3:lo0" sliver_id="urn:publicid:IDN+instageni.nysernet.org+sliver+61759"/>
+    <component_manager name="urn:publicid:IDN+instageni.nysernet.org+authority+cm"/>
+  </link>
+  <link client_id="link-2" sliver_id="urn:publicid:IDN+instageni.nysernet.org+sliver+61760">
+    <interface_ref client_id="interface-4" component_id="urn:publicid:IDN+instageni.nysernet.org+interface+pc3:lo0" sliver_id="urn:publicid:IDN+instageni.nysernet.org+sliver+61761"/>
+    <interface_ref client_id="interface-5" component_id="urn:publicid:IDN+instageni.nysernet.org+interface+pc3:lo0" sliver_id="urn:publicid:IDN+instageni.nysernet.org+sliver+61762"/>
+    <component_manager name="urn:publicid:IDN+instageni.nysernet.org+authority+cm"/>
+  </link>
+  <link client_id="link-3" sliver_id="urn:publicid:IDN+instageni.nysernet.org+sliver+61763">
+    <interface_ref client_id="interface-6" component_id="urn:publicid:IDN+instageni.nysernet.org+interface+pc3:lo0" sliver_id="urn:publicid:IDN+instageni.nysernet.org+sliver+61764"/>
+    <interface_ref client_id="interface-7" component_id="urn:publicid:IDN+instageni.nysernet.org+interface+pc3:lo0" sliver_id="urn:publicid:IDN+instageni.nysernet.org+sliver+61765"/>
+    <component_manager name="urn:publicid:IDN+instageni.nysernet.org+authority+cm"/>
+  </link>
+  <link client_id="link-4" sliver_id="urn:publicid:IDN+instageni.nysernet.org+sliver+61766">
+    <interface_ref client_id="interface-8" component_id="urn:publicid:IDN+instageni.nysernet.org+interface+pc3:lo0" sliver_id="urn:publicid:IDN+instageni.nysernet.org+sliver+61767"/>
+    <interface_ref client_id="interface-9" component_id="urn:publicid:IDN+instageni.nysernet.org+interface+pc3:lo0" sliver_id="urn:publicid:IDN+instageni.nysernet.org+sliver+61768"/>
+    <component_manager name="urn:publicid:IDN+instageni.nysernet.org+authority+cm"/>
+  </link>
+  <link client_id="link-5" sliver_id="urn:publicid:IDN+instageni.nysernet.org+sliver+61769">
+    <interface_ref client_id="interface-10" component_id="urn:publicid:IDN+instageni.nysernet.org+interface+pc3:lo0" sliver_id="urn:publicid:IDN+instageni.nysernet.org+sliver+61770"/>
+    <interface_ref client_id="interface-11" component_id="urn:publicid:IDN+instageni.nysernet.org+interface+pc3:lo0" sliver_id="urn:publicid:IDN+instageni.nysernet.org+sliver+61771"/>
+    <component_manager name="urn:publicid:IDN+instageni.nysernet.org+authority+cm"/>
+  </link>
+  <link client_id="link-6" sliver_id="urn:publicid:IDN+instageni.nysernet.org+sliver+61772">
+    <interface_ref client_id="interface-12" component_id="urn:publicid:IDN+instageni.nysernet.org+interface+pc3:lo0" sliver_id="urn:publicid:IDN+instageni.nysernet.org+sliver+61773"/>
+    <interface_ref client_id="interface-13" component_id="urn:publicid:IDN+instageni.nysernet.org+interface+pc3:lo0" sliver_id="urn:publicid:IDN+instageni.nysernet.org+sliver+61774"/>
+    <component_manager name="urn:publicid:IDN+instageni.nysernet.org+authority+cm"/>
+  </link>
+  <rs:site_info xmlns:rs="http://www.protogeni.net/resources/rspec/ext/site-info/1">
+    <rs:location country="" latitude="43.049957" longitude="-76.152849"/>
+  </rs:site_info>
+</rspec>
