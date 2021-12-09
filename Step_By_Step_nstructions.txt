@@ -1,0 +1,46 @@
+-- Cache 1/Cache 2/ Server
+sudo apt update
+sudo apt upgrade
+
+
+--Cache 1/Cache 2
+Apache Traffic Server installation on “cache1" and “cache2" nodes:
+git clone https://git-wip-us.apache.org/repos/asf/trafficserver.git
+cd trafficserver/
+autoreconf -if
+sudo apt install libpcre3 libpcre3-dev
+./configure --prefix=/opt/ts
+make
+make check
+sudo make install
+sudo /opt/ts/bin/traffic_server -R 1
+
+Change /opt/ts/etc/trafficserver/ip_allow.yaml
+ip_allow:
+  - apply: in
+    ip_addrs: 0.0.0.0-255.255.255.255
+    action: allow
+
+Change /opt/ts/etc/trafficserver/records.config:
+CONFIG proxy.config.http.insert_client_ip INT 1
+CONFIG proxy.config.http.insert_squid_x_forwarded_for INT 1
+CONFIG proxy.config.http.cache.http INT 1
+CONFIG proxy.config.url_remap.remap_required INT 0
+CONFIG proxy.config.reverse_proxy.enabled INT 0
+
+sudo /opt/ts/bin/traffic_ctl server restart
+
+
+--Server
+Apache HTTP Server installation on “server" node:
+sudo apt install apache2
+sudo service apache2 start
+
+from the github code, scp CS655_GENI_Project\CachePy\ExpSrc\writeCustomSizeFile.py to /var/www/html 
+run the writeCustomSizeFile.py in /var/www/html
+
+
+
+
+--Client
+Download github file and put it in a directory called "src"
