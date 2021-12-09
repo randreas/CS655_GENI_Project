@@ -37,10 +37,9 @@ sudo apt install apache2
 sudo service apache2 start
 
 from the github code, scp CS655_GENI_Project\CachePy\ExpSrc\writeCustomSizeFile.py to /var/www/html 
+Install python3.9.9
 run the writeCustomSizeFile.py in /var/www/html
 
-
-
-
 --Client
+Install python3.9.9
 Download github file and put it in a directory called "src"
