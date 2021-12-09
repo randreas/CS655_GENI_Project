@@ -43,3 +43,27 @@ run the writeCustomSizeFile.py in /var/www/html
 --Client
 Install python3.9.9
 Download github file and put it in a directory called "src"
+
+
+
+
+TO RUN THE EXPERIMENT
+Client side
+-- run experimenents in  home directory  based on Experiments that need to be run
+e.g. python \src\CS655_GENI_Project\CachePy\ExpSrc\1MBT1.py
+
+Cache 1/2 side
+sudo /opt/ts/bin/trafficserver stop
+sudo /opt/ts/bin/traffic_server -Cclear      --to clear cache
+sudo /opt/ts/bin/trafficserver start
+
+
+Router
+sudo tc qdisc del dev eth3 root
+sudo tc qdisc add dev eth3 root netem delay 1000ms --to configure delay only and leave loss as 0
+.. or .. 
+sudo tc qdisc del dev eth3 root
+sudo tc qdisc add dev eth3 root netem delay 1000ms loss 0.1 --to configure delay and loss as per needed
+
+
+
